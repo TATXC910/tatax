@@ -1,0 +1,100 @@
+/* รีเซ็ต */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= หน้าเว็บ ================= */
+.page {
+  height: 100vh;
+  padding: 80px;
+  box-sizing: border-box;
+  display: none;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* แสดงหน้าตาม anchor */
+.page:target {
+  display: block;
+}
+
+/* หน้าแรก */
+#page1 {
+  display: block;
+}
+
+/* ================= พื้นหลัง ================= */
+.bg1 { background-image: url("LINE_20260128_110621.jpg"); }
+.bg2 { background-image: url("LINE_20260128_110621.jpg"); }
+.bg3 { background-image: url("LINE_20260128_110621.jpg"); }
+.bg4 { background-image: url("LINE_20260128_110621.jpg"); }
+.bg5 { background-image: url("LINE_20260128_110621.jpg"); }
+
+/* ================= ตัวอักษร ================= */
+h1 {
+  color: #1a73ff;
+  font-size: 48px;
+}
+
+p {
+  font-size: 26px;
+}
+
+/* ================= ปุ่ม back / next ================= */
+.back, .next {
+  position: absolute;
+  bottom: 20px;
+}
+
+.back { left: 20px; }
+.next { right: 20px; }
+
+.back img,
+.next img {
+  width: 140px;
+  height: 70px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+/* ================= เมนูด้านขวา ================= */
+.menu {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ปุ่มบนสุด : สี่เหลี่ยมแนวตั้ง */
+.menu .top-btn {
+  width: px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+}
+
+.menu .top-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ปุ่มอื่น : วงรี */
+.menu a:not(.top-btn) {
+  width: 150px;
+  height: 75px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: block;
+}
+
+.menu a:not(.top-btn) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
