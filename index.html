@@ -2,92 +2,138 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio</title>
-<link rel="stylesheet" href="สร้างเว็ปนะ1.1.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  color:rgb(20, 9, 9);
+  overflow:hidden; /* ไม่ให้เลื่อน */
+}
+
+/* ทุกหน้าเหมือนกันหมด */
+.page{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  padding:60px 20px;
+  box-sizing:border-box;
+  background-size:cover;
+  background-position:center;
+  display:none;
+}
+
+/* แสดงหน้าที่กด */
+.page:target{
+  display:block;
+}
+
+/* หน้าแรกตอนเปิดเว็บ */
+#page1{
+  display:block;
+}
+
+/* พื้นหลัง */
+.bg1{ background-image:url("LINE_20260128_110621.jpg"); }
+.bg2{ background-image:url("LINE_20260128_110621.jpg"); }
+.bg3{ background-image:url("LINE_20260128_110621.jpg"); }
+.bg4{ background-image:url("LINE_20260128_110621.jpg"); }
+.bg5{ background-image:url("LINE_20260128_110621.jpg"); }
+
+h1{ font-size:28px; }
+p{ font-size:18px; }
+
+/* ปุ่ม */
+.next,.back{
+  position:absolute;
+  bottom:20px;
+}
+
+.next{ right:15px; }
+.back{ left:15px; }
+
+.next img,.back img{
+  width:100px;
+  height:50px;
+  border-radius:50px;
+  object-fit:cover;
+}
+
+/* เมนู */
+.menu{
+  position:fixed;
+  right:10px;
+  top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.menu a{
+  width:80px;
+  height:40px;
+  overflow:hidden;
+  border-radius:30px;
+}
+
+.menu img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+</style>
 </head>
+
 <body>
 
-<!-- ================= หน้า 1 ================= -->
 <section id="page1" class="page bg1">
-  <h1>ห่ะอะไรนะ</h1>
-
-  <a href="#page2" class="next">
-    <img src="ถัดไป.jpg" alt="next">
-  </a>
+<h1>ห่ะอะไรนะ</h1>
+<a href="#page2" class="next"><img src="ถัดไป.jpg"></a>
 </section>
 
-<!-- ================= หน้า 2 ================= -->
 <section id="page2" class="page bg2">
-  <h1>ข้อมูลส่วนตัว</h1>
-  <p>ชื่อ : นาย คามิน แก้วกล้า</p>
-  <p>ชื่อเล่น : บูม</p>
-  <p>วันเกิด : 26 กรกฎาคม 2551</p>
-  <p>อายุ : 17</p>
-
-  <a href="#page1" class="back">
-    <img src="ย้อนกลีบ.jpg" alt="back">
-  </a>
-  <a href="#page3" class="next">
-    <img src="ถัดไป.jpg" alt="next">
-  </a>
+<h1>ข้อมูลส่วนตัว</h1>
+<p>ชื่อ : นาย คามิน แก้วกล้า</p>
+<p>ชื่อเล่น : บูม</p>
+<p>วันเกิด : 26 กรกฎาคม 2551</p>
+<p>อายุ : 17</p>
+<a href="#page1" class="back"><img src="ย้อนกลีบ.jpg"></a>
+<a href="#page3" class="next"><img src="ถัดไป.jpg"></a>
 </section>
 
-<!-- ================= หน้า 3 ================= -->
 <section id="page3" class="page bg3">
-  <h1>งานอดิเรก</h1>
-  <p>เล่นเกม / นอน / วิ่งออกกำลังกาย</p>
-
-  <a href="#page2" class="back">
-    <img src="ย้อนกลีบ.jpg" alt="back">
-  </a>
-  <a href="#page4" class="next">
-    <img src="ถัดไป.jpg" alt="next">
-  </a>
+<h1>งานอดิเรก</h1>
+<p>เล่นเกม / นอน / วิ่งออกกำลังกาย</p>
+<a href="#page2" class="back"><img src="ย้อนกลีบ.jpg"></a>
+<a href="#page4" class="next"><img src="ถัดไป.jpg"></a>
 </section>
 
-<!-- ================= หน้า 4 ================= -->
 <section id="page4" class="page bg4">
-  <h1>ของที่ชอบ</h1>
-  <p>ขนมเลย์ แป๊ปซี่ ผัดคะน้าหมูกรอบไข่ดาว</p>
-
-  <a href="#page3" class="back">
-    <img src="ย้อนกลีบ.jpg" alt="back">
-  </a>
-  <a href="#page5" class="next">
-    <img src="ถัดไป.jpg" alt="next">
-  </a>
+<h1>ของที่ชอบ</h1>
+<p>ขนมเลย์ แป๊ปซี่ ผัดคะน้าหมูกรอบไข่ดาว</p>
+<a href="#page3" class="back"><img src="ย้อนกลีบ.jpg"></a>
+<a href="#page5" class="next"><img src="ถัดไป.jpg"></a>
 </section>
 
-<!-- ================= หน้า 5 ================= -->
 <section id="page5" class="page bg5">
-  <h1>ติดต่อ</h1>
-  <p>Facebook : บูม ฯ.</p>
-  <p>Instagram : TATX</p>
-  <p>Discord : yaahaaw_</p>
-
-  <a href="#page4" class="back">
-    <img src="ย้อนกลีบ.jpg" alt="back">
-  </a>
-  <a href="#page1" class="next">
-    <img src="หน้าเเรกนะ.jpg" alt="next">
-  </a>
+<h1>ติดต่อ</h1>
+<p>Facebook : บูม ฯ.</p>
+<p>Instagram : TATX</p>
+<p>Discord : yaahaaw_</p>
+<a href="#page4" class="back"><img src="ย้อนกลีบ.jpg"></a>
+<a href="#page1" class="next"><img src="หน้าเเรกนะ.jpg"></a>
 </section>
 
-<!-- ================= เมนูด้านขวา ================= -->
 <div class="menu">
-
-  <!-- ปุ่มบนสุด : สี่เหลี่ยมแนวตั้ง -->
-  <a href="#page1" class="top-btn">
-    <img src="44063.jpg" alt="logo">
-  </a>
-
-  <!-- ปุ่มอื่น : วงรี -->
-  <a href="#page1"><img src="44039.jpg" alt="page1"></a>
-  <a href="#page2"><img src="2.jpg" alt="page2"></a>
-  <a href="#page3"><img src="3.jpg" alt="page3"></a>
-  <a href="#page4"><img src="5.jpg" alt="page4"></a>
-  <a href="#page5"><img src="4.jpg" alt="page5"></a>
-
+<a href="#page1"><img src="44039.jpg"></a>
+<a href="#page2"><img src="2.jpg"></a>
+<a href="#page3"><img src="3.jpg"></a>
+<a href="#page4"><img src="5.jpg"></a>
+<a href="#page5"><img src="4.jpg"></a>
 </div>
 
 </body>
